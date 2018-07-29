@@ -18,10 +18,10 @@ To complete this task, you must:
 #### The User story
 As a user,
 Assuming I have access to a modern web browser (chrome) with an internet connection and I am visiting the page
-- I would like to see a list/grid of bikes (taken from the bike data URL below)
-- I would like to see a the name, an image, a description and the class for each bike
-- I would like to be able to sort the bikes into a custom order based on class
-- I would like my custom order to be saved and not change when I refresh the page
+A) I would like to see a list/grid of bikes (taken from the bike data URL below)
+B) I would like to see a the name, an image, a description and the class for each bike
+C) I would like to be able to sort the bikes into a custom order based on class
+D) I would like my custom order to be saved and not change when I refresh the page
 
 A JSON object with all the relevant bike data is available at, feel free to call that URL directly from your page or host it on your server if you're using one: [https://jujhar.com/bikes.json](https://jujhar.com/bikes.json)
 
@@ -46,3 +46,15 @@ Your application will be assessed on the following criteria (in order of importa
 We're trying to see your thought processes with this task. What's more important to us is how you approach the task, rather than the actual final output itself.
 
 Looking forward to seeing your project :-)
+
+
+### Development:
+A) Use Bootstrap to create a responsive UI, with a grid display for large devices, and a list display for small devices;
+B) Use Google Modular Design for React library, in particular the "Card" component, to setup the necessary Bikes information;
+C) Use Redux actions to set a filter, and selectores to choose only the appropriate parts;
+D) To determine;
+
+
+
+
+
