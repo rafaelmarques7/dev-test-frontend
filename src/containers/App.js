@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from '../media/logo.svg';
 import '../styles/App.css'
+import Bikes from './Bikes';
 
 class App extends Component {
   render() {
@@ -16,6 +17,10 @@ class App extends Component {
         <p className="New-tag">
           Everything is displaying fine!
         </p>
+        <p>
+          Here are the bikes:
+        </p>
+        <Bikes />
       </div>
     );
   }
