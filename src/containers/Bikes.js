@@ -23,12 +23,12 @@ class ProductList extends React.Component {
     return (
       <ul>
         {products.map(product =>
-          //<li key={product.id}>{product.name}</li>
           <BikeCard
             key = {product.id}
             id = {product.id}
             name = {product.name}
             description = {product.description}
+            types = {product.class}
             imageSmall = {product.image.thumb}
             imageLarge = {product.image.large}
           />
