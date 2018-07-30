@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { fetchBikes } from "../manager/actions";
+import BikeCard from "../components/BikeCard";
 
 class ProductList extends React.Component {
   componentDidMount() {
@@ -22,7 +23,15 @@ class ProductList extends React.Component {
     return (
       <ul>
         {products.map(product =>
-          <li key={product.id}>{product.name}</li>
+          //<li key={product.id}>{product.name}</li>
+          <BikeCard
+            key = {product.id}
+            id = {product.id}
+            name = {product.name}
+            description = {product.description}
+            imageSmall = {product.image.thumb}
+            imageLarge = {product.image.large}
+          />
         )}
       </ul>
     );
