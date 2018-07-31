@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from '../media/logo.svg';
 import '../styles/App.css'
 import Bikes from './Bikes';
+import FilterBikes from '../components/FilterBikes';
 
 class App extends Component {
   render() {
@@ -20,6 +21,7 @@ class App extends Component {
         <p>
           Here are the bikes:
         </p>
+        <FilterBikes />
         <Bikes />
       </div>
     );
