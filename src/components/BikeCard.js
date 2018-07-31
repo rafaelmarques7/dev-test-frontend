@@ -26,8 +26,8 @@ const BikeCardProps = {
   name: PropTypes.string.isRequired,
   // Description of the Bike
   description: PropTypes.string.isRequired,
-  // List describing the classes/types of the bikes
-  types: PropTypes.arrayOf(PropTypes.string).isRequired,
+  // List describing the categories(classes) of the bikes
+  categories: PropTypes.arrayOf(PropTypes.string).isRequired,
   // URL's pointing to the images
   imageSmall: PropTypes.string.isRequired,
   imageLarge: PropTypes.string.isRequired,
@@ -68,7 +68,7 @@ const styles = theme => ({
 // Define the component
 class BikeCard extends React.Component {
   render() {
-    const { classes, id, name, description, types, imageSmall, imageLarge } = this.props; 
+    const { classes, id, name, description, categories, imageSmall, imageLarge } = this.props; 
     
     return (
       <div>
@@ -76,7 +76,7 @@ class BikeCard extends React.Component {
           className={classes.card}>             {/* className using classes prop object is necessary for applying CSS styles*/}
           <CardHeader  
             title={name}
-            subheader={types.join(', ')}        // Use .join() to create a string from an array
+            subheader={categories.join(', ')}        // Use .join() to create a string from an array
             avatar = {
               <Avatar
                 className={classes.avatar}

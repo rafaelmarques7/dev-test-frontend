@@ -9,7 +9,7 @@ class ProductList extends React.Component {
   }
 
   render() {
-    const { error, loading, products } = this.props;
+    const { error, loading, products, types } = this.props;
     console.log("Bikes props: ", this.props)
 
     if (error) {
@@ -28,7 +28,7 @@ class ProductList extends React.Component {
             id = {product.id}
             name = {product.name}
             description = {product.description}
-            types = {product.class}
+            categories = {product.class}
             imageSmall = {product.image.thumb}
             imageLarge = {product.image.large}
           />
@@ -41,7 +41,7 @@ class ProductList extends React.Component {
 const mapStateToProps = state => ({
   products: state.bikes.items,
   loading: state.loading,
-  error: state.error
+  error: state.error,
 });
 
 export default connect(mapStateToProps)(ProductList);
