@@ -14,6 +14,8 @@ import MenuItem from '@material-ui/core/MenuItem';
 
 // list the necessary props
 const FilteredBikesProps = {
+  // the currently selected filter
+  filter: PropTypes.string.isRequired,
   // array of categories to be presented as items in a list
   categories: PropTypes.arrayOf(PropTypes.string).isRequired,
   /**
@@ -22,12 +24,6 @@ const FilteredBikesProps = {
    *    category ("all" or one of the provided by categories )
    */
   onSetFilter: PropTypes.func.isRequired,
-}
-
-// list default props to test component
-const defaultProps = {
-  categories: ["Category_1", "Category_2"],
-  onSetFilter: () => {},
 }
 
 
@@ -55,7 +51,7 @@ class FilterBikes extends React.Component {
       currCategory: cat,
       anchorEl: null,
     })
-    this.props.onSetFilter()
+    this.props.onSetFilter(cat)
   }
 
   render() {
@@ -98,7 +94,6 @@ class FilterBikes extends React.Component {
 
 // apply the props
 FilterBikes.propTypes = FilteredBikesProps;
-FilterBikes.defaultProps = defaultProps;
 
 
 // export the component

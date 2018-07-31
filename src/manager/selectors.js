@@ -1,4 +1,6 @@
-// returns an Array of all unique categories 
+/** 
+ * Returns an Array of all unique categories 
+*/
 export const getAllCategories = (state) => {
   var categories = [];
   state.bikes.items.filter(function(bike) {
@@ -11,13 +13,16 @@ export const getAllCategories = (state) => {
   return categories;
 }
 
-// returns an Array of the items which match the filter
+
+/**
+ * Returns an array of the items which match the filter;
+ * if the filter is set to "all" return the entire bikes array;
+ * otherwise filter by the selected category;
+ */
 export const getFilteredBikes = (state, category) => {
-  // if the filter is set to "all" return the entire bikesarray
   if (category === "all") {
     return state.bikes.items;
   }
-  // otherwise, filter by category
   var filtered_bikes = [];
   state.bikes.items.filter((bike) => {
     bike.class.forEach(cat => {
@@ -29,3 +34,10 @@ export const getFilteredBikes = (state, category) => {
   return filtered_bikes;
 }
 
+
+/** 
+ * Returns the currently selected filter
+ */
+export const getCurrentFilter = (state) => {
+  return state.filter
+}

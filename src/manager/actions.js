@@ -10,7 +10,7 @@ export const FETCH_BIKES_FAILURE = "FETCH_BIKES_FAILURE"
 
 
 // action to set the visibility filter
-export const setBikesFiilter = (cat) => ({
+export const setBikesFilter = (cat) => ({
   type: SET_BIKES_FILTER,
   payload: cat,
 })
@@ -47,12 +47,14 @@ export function fetchBikes() {
   console.log("fetchBikes was called")
   return dispatch => {
     // dispatch action to inform loading has begun
+    console.log("inside dispatch of fetchbikes")
     dispatch(fetchBikesBegin());
     // try to load the data
     return fetch(bikesUrl)
       .then(handleErrors)
       .then(res => res.json())
       .then(json => {
+        console.log("dispatching success")
         dispatch(fetchBikesSuccess(json))
         return json;
       })
