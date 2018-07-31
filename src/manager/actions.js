@@ -3,9 +3,17 @@ const bikesUrl = "https://jujhar.com/bikes.json"
 
 
 // Constant action names
+export const SET_BIKES_FILTER = "SET_BIKES_FILTER"
 export const FETCH_BIKES_BEGIN = "FETCH_BIKES_BEGIN"
 export const FETCH_BIKES_SUCCESS = "FETCH_BIKES_SUCCESS"
 export const FETCH_BIKES_FAILURE = "FETCH_BIKES_FAILURE"
+
+
+// action to set the visibility filter
+export const setBikesFiilter = (cat) => ({
+  type: SET_BIKES_FILTER,
+  payload: cat,
+})
 
 
 // load, success and failure actions
@@ -13,10 +21,12 @@ export const fetchBikesBegin = () => ({
   type: FETCH_BIKES_BEGIN,
 });
 
+
 export const fetchBikesSuccess = (bikes) => ({
   type: FETCH_BIKES_SUCCESS,
   payload: bikes,
 });
+
 
 export const fetchBikesFailure = (error) => ({
   type: FETCH_BIKES_FAILURE,

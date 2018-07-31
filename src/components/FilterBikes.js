@@ -14,12 +14,20 @@ import MenuItem from '@material-ui/core/MenuItem';
 
 // list the necessary props
 const FilteredBikesProps = {
+  // array of categories to be presented as items in a list
   categories: PropTypes.arrayOf(PropTypes.string).isRequired,
+  /**
+   * Action to be dispatched when an item is clicked
+   * Function arguments:
+   *    category ("all" or one of the provided by categories )
+   */
+  onSetFilter: PropTypes.func.isRequired,
 }
 
-// list the default props
+// list default props to test component
 const defaultProps = {
   categories: ["Category_1", "Category_2"],
+  onSetFilter: () => {},
 }
 
 
@@ -43,11 +51,11 @@ class FilterBikes extends React.Component {
   }
 
   handleMenuItemClick = (event, cat) => {
-    console.log("handleItemClick called with: ", cat)
     this.setState({
       currCategory: cat,
       anchorEl: null,
     })
+    this.props.onSetFilter()
   }
 
   render() {

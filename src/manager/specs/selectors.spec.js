@@ -48,4 +48,8 @@ it('selects/filters the bikes  according to the selectod category', () => {
     "name": "Bike_2", "class": ["Class_1", "Class_3"]
   }];
   expect(expectedBikes).toEqual(filteredBikes);
+
+  var category = "all";
+  var filteredBikes = getFilteredBikes(defState, category);
+  expect(filteredBikes).toEqual(defState.bikes.items);
 });

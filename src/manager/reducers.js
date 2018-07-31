@@ -1,7 +1,8 @@
 import {
   FETCH_BIKES_BEGIN,
   FETCH_BIKES_SUCCESS,
-  FETCH_BIKES_FAILURE
+  FETCH_BIKES_FAILURE,
+  SET_BIKES_FILTER,
 } from './actions';
 
 
@@ -12,6 +13,7 @@ export const initialState = {
   },
   loading: false,
   error: null,
+  filter: "all",    // this is called filter but could be called "show" as it determines what to display
 };
 
 
@@ -24,6 +26,8 @@ export function rootReducer(state=initialState, action) {
       return setBikesSuccess(state, action);
     case FETCH_BIKES_FAILURE:
       return setBikesFailure(state, action);
+    case SET_BIKES_FILTER:
+      return setBikesFilter(state, action);
     default:  
       return state;
   }
@@ -54,5 +58,13 @@ const setBikesFailure = (state, action) => {
     ...state,
     loading: false,
     error: action.payload
+  }
+}
+
+// Sets the visibility filter 
+const setBikesFilter = (state, action) => {
+  return {
+    ...state,
+    filter: action.payload
   }
 }
