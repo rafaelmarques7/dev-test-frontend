@@ -30,12 +30,12 @@ export const fetchBikesSuccess = (bikes) => ({
 
 export const fetchBikesFailure = (error) => ({
   type: FETCH_BIKES_FAILURE,
-  payload: { error },
+  payload: error ,
 });
 
 
 // Function to handle errors
-function handleErrors(response) {
+export function handleErrors(response) {
   if (!response.ok) {
     throw Error(response.statusText);
   }
