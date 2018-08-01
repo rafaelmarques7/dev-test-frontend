@@ -2,8 +2,44 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="850fece8-3b8c-407d-b348-496561595944" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/array-includes/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/array-includes/.travis.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/babel-plugin-dynamic-import-node/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/babel-plugin-dynamic-import-node/.travis.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/es-abstract/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/es-abstract/.travis.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/es-to-primitive/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/es-to-primitive/.travis.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/es6-iterator/appveyor.yml" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/es6-iterator/appveyor.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/extend/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/extend/.travis.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/function-bind/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/function-bind/.travis.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/function.prototype.name/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/function.prototype.name/.travis.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/handlebars/appveyor.yml" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/handlebars/appveyor.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/has-symbols/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/has-symbols/.travis.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/immutable/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/immutable/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/immutable/contrib/cursor/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/immutable/contrib/cursor/__tests__/Cursor.ts.skip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/immutable/contrib/cursor/index.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/immutable/contrib/cursor/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/immutable/dist/immutable-nonambient.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/immutable/dist/immutable.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/immutable/dist/immutable.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/immutable/dist/immutable.js.flow" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/immutable/dist/immutable.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/immutable/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/is-callable/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/is-callable/.travis.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/is-regex/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/is-regex/.travis.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/object-inspect/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/object-inspect/.travis.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/object-keys/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/object-keys/.travis.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/object.entries/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/object.entries/.travis.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/object.values/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/object.values/.travis.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/resolve/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/resolve/.travis.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/resolve/appveyor.yml" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/resolve/appveyor.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/webpack-manifest-plugin/node_modules/jsonfile/appveyor.yml" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/webpack-manifest-plugin/node_modules/jsonfile/appveyor.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/tests/BikeCard.spec.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/specs/BikeCard.spec.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/tests/Bikes.spec.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/specs/Bikes.spec.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/tests/FilterBikes.spec.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/specs/FilterBikes.spec.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/tests/GridWrapper.spec.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/specs/GridWrapper.spec.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,8 +53,8 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="24" selection-start-line="24" selection-end-line="24" />
+            <state relative-caret-position="408">
+              <caret line="45" selection-start-line="45" selection-end-line="45" />
             </state>
           </provider>
         </entry>
@@ -27,8 +63,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="428">
-                <caret line="58" column="84" selection-start-line="58" selection-start-column="84" selection-end-line="58" selection-end-column="84" />
+              <first_editor relative-caret-position="748">
+                <caret line="146" column="3" lean-forward="true" selection-start-line="146" selection-start-column="3" selection-end-line="146" selection-end-column="3" />
               </first_editor>
               <second_editor />
             </state>
@@ -57,6 +93,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -69,14 +106,20 @@
               <item name="BikesApp" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="BikesApp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BikesApp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="editorconfig.notification" value="true;" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
@@ -109,23 +152,23 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18124342" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.115911484" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32897604" />
+      <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -134,20 +177,7 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
+        <state relative-caret-position="408">
           <caret line="24" selection-start-line="24" selection-end-line="24" />
         </state>
       </provider>
@@ -155,8 +185,34 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="428">
+          <first_editor relative-caret-position="986">
             <caret line="58" column="84" selection-start-line="58" selection-start-column="84" selection-end-line="58" selection-end-column="84" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.js" />
+    <entry file="file://$PROJECT_DIR$/src/App.js" />
+    <entry file="file://$PROJECT_DIR$/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="45" selection-start-line="45" selection-end-line="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="748">
+            <caret line="146" column="3" lean-forward="true" selection-start-line="146" selection-start-column="3" selection-end-line="146" selection-end-column="3" />
           </first_editor>
           <second_editor />
         </state>
