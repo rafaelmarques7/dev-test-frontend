@@ -1,4 +1,5 @@
 /**
+ * BikeCard.js
  * Presentational component for the display of the Bike information 
  * Component follows an "Instagram" style
  * The heavy lifting is enabled by Material-ui library

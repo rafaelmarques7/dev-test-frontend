@@ -1,5 +1,6 @@
 /**
- * FilterBikes.js is a presentational component to display a dropdown menu, displaying all bikes Categories, 
+ * FilterBikes.js 
+ * This is a presentational component to display a dropdown menu, displaying all bikes Categories, 
  * which can be used to set a filter to constrain the presented list.
  * This component is implemeneted using the DropDown menu 
  * provided by Material-ui.
@@ -26,7 +27,7 @@ const propTypes = {
    * Action to be dispatched when an item is clicked
    * @param {string} category representing the filter to be applied
    */
-  onSetFilter: PropTypes.func.isRequired,
+  setBikesFilter: PropTypes.func.isRequired,
 }
 
 
@@ -34,7 +35,7 @@ const propTypes = {
 const defaultProps = {
     filter: "all",
     categories: [],
-    onSetFilter: () => {},
+    setBikesFilter: () => {},
 }
 
 
@@ -58,7 +59,8 @@ class FilterBikes extends React.Component {
       currCategory: cat,
       anchorEl: null,
     })
-    this.props.onSetFilter(cat)
+    //this.props.onSetFilter(cat)
+    this.props.setBikesFilter(cat)
   }
 
   render() {

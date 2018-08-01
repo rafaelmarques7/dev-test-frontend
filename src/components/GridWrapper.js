@@ -1,4 +1,5 @@
 /**
+ * GridWrapper.js
  * This component wraps around any list of children nodes
  * and presents them in a flexible grid system.
  * It displays 3 columns for Medium+ devices, and a single column for small ones.
@@ -24,6 +25,7 @@ const propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
+
 const styles = theme => ({
   root: {
     flexGrow: 1,
@@ -31,26 +33,22 @@ const styles = theme => ({
 });
 
 
+const FullWidthGrid = ({ classes, children }) => (
+  <div className={classes.root}>
+    <Grid container spacing={24}>
+      {
+        children.map((child, i) => {
+          return (
+            <Grid item xs={12} md={4} key={i}>
+              {child}
+            </Grid>
+          )
+        })
+      }
+    </Grid>
+  </div>
+);
 
-function FullWidthGrid(props) {
-  const { classes, children } = props;
-
-  return (
-    <div className={classes.root}>
-      <Grid container spacing={24}>
-        {
-          children.map((child) => {
-            return (
-              <Grid item xs={12} md={4}>
-                {child}
-              </Grid>
-            )
-          })
-        }
-      </Grid>
-    </div>
-  );
-}
 
 FullWidthGrid.propTypes = propTypes;
 
