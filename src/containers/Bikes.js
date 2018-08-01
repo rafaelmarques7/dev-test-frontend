@@ -12,6 +12,7 @@ import {
   getFilteredBikes, 
   getAllCategories
 } from "../manager/selectors";
+import GridWrapper from "../components/GridWrapper";
 
 
 class ProductList extends React.Component {
@@ -39,17 +40,19 @@ class ProductList extends React.Component {
           onSetFilter={(cat) => { setBikesFilter(cat)} }
         />
         <ul>
-          {products.map(product =>
-            <BikeCard
-              key = {product.id}
-              id = {product.id}
-              name = {product.name}
-              description = {product.description}
-              categories = {product.class}
-              imageSmall = {product.image.thumb}
-              imageLarge = {product.image.large}
-            />
-          )}
+          <GridWrapper>
+            {products.map(product =>
+              <BikeCard
+                key = {product.id}
+                id = {product.id}
+                name = {product.name}
+                description = {product.description}
+                categories = {product.class}
+                imageSmall = {product.image.thumb}
+                imageLarge = {product.image.large}
+              />
+            )}
+          </GridWrapper>
         </ul>
       </div>
     );
