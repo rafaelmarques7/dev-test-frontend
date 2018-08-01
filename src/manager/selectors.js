@@ -1,4 +1,10 @@
 /** 
+ * selectors.js
+ * This file declares the selectors, 
+ * which are used to obtain the necessary information from the state.
+*/
+
+/** 
  * Returns an Array of all unique categories 
 */
 export const getAllCategories = (state) => {

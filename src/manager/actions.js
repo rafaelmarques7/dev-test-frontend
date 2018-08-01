@@ -1,40 +1,60 @@
-// The Url for the bikes data
+/**
+ * actions.js
+ * File with all the necessary actions to evolve the state of the application.
+ * It also declares and exports consts declaring the types of the actions - can be used by reducers.
+ */
+
+
+/**
+ * The URL with the data for the application
+ */
 const bikesUrl = "https://jujhar.com/bikes.json"
 
-
-// Constant action names
+/**
+ * Declares consts with the name of the actions
+ */
 export const SET_BIKES_FILTER = "SET_BIKES_FILTER"
 export const FETCH_BIKES_BEGIN = "FETCH_BIKES_BEGIN"
 export const FETCH_BIKES_SUCCESS = "FETCH_BIKES_SUCCESS"
 export const FETCH_BIKES_FAILURE = "FETCH_BIKES_FAILURE"
 
 
-// action to set the visibility filter
+/** 
+ * action to set the visibility filter
+*/
 export const setBikesFilter = (cat) => ({
   type: SET_BIKES_FILTER,
   payload: cat,
 })
 
 
-// load, success and failure actions
+/**
+ * action to inform that the data request has begun
+ */
 export const fetchBikesBegin = () => ({
   type: FETCH_BIKES_BEGIN,
 });
 
-
+/**
+ * action to inform that the data request was successfull
+ */
 export const fetchBikesSuccess = (bikes) => ({
   type: FETCH_BIKES_SUCCESS,
   payload: bikes,
 });
 
-
+/**
+ * action to inform that the data request encountered an error
+ */
 export const fetchBikesFailure = (error) => ({
   type: FETCH_BIKES_FAILURE,
   payload: error ,
 });
 
 
-// Function to handle errors
+/**  
+ * Function to handle errors
+*/
 export function handleErrors(response) {
   if (!response.ok) {
     throw Error(response.statusText);
@@ -42,24 +62,23 @@ export function handleErrors(response) {
   return response;
 }
 
-// Async action to load bikes data
+/**
+ * Asyn action to load the Bikes data from the API
+ * Dispatches 3 actions:
+ *    - fetchBikesBegin   - informs user loading has begun 
+ *    - fetchBikesSuccess - merge state with received data
+ *    - fetchBikesFailure - informs user something went wrong
+ */
 export function fetchBikes() {
-  console.log("fetchBikes was called")
   return dispatch => {
-    // dispatch action to inform loading has begun
-    console.log("inside dispatch of fetchbikes")
     dispatch(fetchBikesBegin());
-    // try to load the data
     return fetch(bikesUrl)
       .then(handleErrors)
       .then(res => res.json())
       .then(json => {
-        console.log("dispatching success")
         dispatch(fetchBikesSuccess(json))
         return json;
       })
       .catch(error => dispatch(fetchBikesFailure(error)));
   };
 }
-
-

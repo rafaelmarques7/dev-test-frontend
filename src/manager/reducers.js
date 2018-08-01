@@ -1,3 +1,10 @@
+/**
+ * reducer.js
+ * This file contains the main reducer and its unit functions
+ * which manage the state of the applications.
+ * It also contains the initiialState of the app.
+ */
+
 import {
   FETCH_BIKES_BEGIN,
   FETCH_BIKES_SUCCESS,
@@ -6,18 +13,26 @@ import {
 } from './actions';
 
 
-// Construct initial state
+/**
+ * Declare the initial state of the app
+ */
 export const initialState = {
+  // place holder for the bikes data
   bikes: {
     items: []
   },
+  // used to inform if the request is pending
   loading: false,
+  // used to inform if there are errors 
   error: null,
-  filter: "all",    // this is called filter but could be called "show" as it determines what to display
+  // used to decide which bikes to show
+  filter: "all",   
 };
 
 
-// Main function - handles all the state transitions
+/** 
+ * rootReducer - handles all the state transitions
+*/
 export function rootReducer(state=initialState, action) {
   switch(action.type){
     case FETCH_BIKES_BEGIN:
@@ -34,7 +49,9 @@ export function rootReducer(state=initialState, action) {
 }
 
 
-// Sets loading to true
+/** 
+ * sets loading to true, and error to falsy
+*/
 const setBikesBegin = (state) => {
   return {
     ...state,
@@ -43,7 +60,9 @@ const setBikesBegin = (state) => {
   }
 }
 
-// Sets loaded data to the state; Sets loading to false
+/** 
+ * merges the loaded data to the state, sets loading to false
+*/
 const setBikesSuccess = (state, action) => {
   return {
     ...state,
@@ -52,7 +71,9 @@ const setBikesSuccess = (state, action) => {
   } 
 }
 
-// Sets the received error;
+/** 
+ * merges the error information to the state, sets loading to false
+*/
 const setBikesFailure = (state, action) => {
   return {
     ...state,
@@ -61,7 +82,9 @@ const setBikesFailure = (state, action) => {
   }
 }
 
-// Sets the visibility filter 
+/** 
+ * Sets the visibility filter 
+*/
 const setBikesFilter = (state, action) => {
   return {
     ...state,

@@ -1,3 +1,7 @@
+/**
+ * App.js
+ * This is the "main" component, invoked by the src/index.js
+ */
 import React, { Component } from 'react';
 import logo from '../media/logo.svg';
 import '../styles/App.css'
