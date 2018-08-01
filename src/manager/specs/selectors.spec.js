@@ -1,7 +1,8 @@
 import React from 'react';
 import { 
   getAllCategories, 
-  getFilteredBikes 
+  getFilteredBikes, 
+  getCurrentFilter
 } from '../selectors';
 
 
@@ -53,3 +54,11 @@ it('selects/filters the bikes  according to the selectod category', () => {
   var filteredBikes = getFilteredBikes(defState, category);
   expect(filteredBikes).toEqual(defState.bikes.items);
 });
+
+
+// unit test for "getCurrentFilter"
+it('retrives the currently selected filter', () => {
+  var state = { "filter": "all" };
+  var currentFilter = getCurrentFilter(state);
+  expect(currentFilter).toEqual("all");
+})

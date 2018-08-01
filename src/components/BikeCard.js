@@ -38,6 +38,8 @@ const BikeCardProps = {
 const styles = theme => ({
   card: {
     maxWidth: 500,
+    marginLeft: "auto",
+    marginRight: "auto",
   },
   media: {
     height: 0,
@@ -65,10 +67,16 @@ const styles = theme => ({
 });
 
 
-// Define the component
 class BikeCard extends React.Component {
   render() {
-    const { classes, id, name, description, categories, imageSmall, imageLarge } = this.props; 
+    const { 
+      name, 
+      classes, 
+      categories, 
+      imageSmall, 
+      imageLarge, 
+      description, 
+    } = this.props; 
     
     return (
       <div>

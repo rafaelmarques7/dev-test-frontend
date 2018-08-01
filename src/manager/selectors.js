@@ -3,7 +3,7 @@
 */
 export const getAllCategories = (state) => {
   var categories = [];
-  state.bikes.items.filter(function(bike) {
+  state.bikes.items.forEach((bike) => {
     bike.class.forEach(cat => {
       if (categories.indexOf(cat) === -1) {
         categories.push(cat)  
@@ -24,7 +24,7 @@ export const getFilteredBikes = (state, category) => {
     return state.bikes.items;
   }
   var filtered_bikes = [];
-  state.bikes.items.filter((bike) => {
+  state.bikes.items.forEach((bike) => {
     bike.class.forEach(cat => {
       if (cat === category && filtered_bikes.indexOf(bike) === -1) {
         filtered_bikes.push(bike)

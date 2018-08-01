@@ -1,5 +1,8 @@
 import React from "react";
 import { connect } from "react-redux";
+import { bindActionCreators } from 'redux';
+import BikeCard from "../components/BikeCard";
+import FilterBikes from "../components/FilterBikes";
 import { 
   fetchBikes, 
   setBikesFilter
@@ -9,19 +12,16 @@ import {
   getFilteredBikes, 
   getAllCategories
 } from "../manager/selectors";
-import FilterBikes from "../components/FilterBikes";
-import BikeCard from "../components/BikeCard";
 
 
 class ProductList extends React.Component {
   
   componentDidMount() {
-    this.props.dispatch(fetchBikes());
+    this.props.fetchBikes();
   }
 
   render() {
-    const { categories, filter, products, loading, error, onSetFilter } = this.props;
-    console.log("Bikes props: ", this.props)
+    const { categories, filter, products, loading, error, setBikesFilter } = this.props;
 
     if (error) {
       return <div>Error! {error.message}</div>;
@@ -36,7 +36,7 @@ class ProductList extends React.Component {
         <FilterBikes 
           filter={filter}
           categories={categories}
-          onSetFilter={(cat) => { this.props.dispatch(setBikesFilter(cat))} }
+          onSetFilter={(cat) => { setBikesFilter(cat)} }
         />
         <ul>
           {products.map(product =>
@@ -66,12 +66,15 @@ const mapStateToProps = state => ({
 });
 
 
-// const mapDispatchToProps = dispatch => ({
-//   onSetFilter: setBikesFilter,
-// })
+const mapDispatchToProps = dispatch => {
+  return bindActionCreators({
+    fetchBikes, 
+    setBikesFilter   
+  }, dispatch);
+};
 
 
 export default connect(
   mapStateToProps, 
-  //mapDispatchToProps
+  mapDispatchToProps
 )(ProductList);

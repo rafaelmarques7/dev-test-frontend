@@ -1,6 +1,6 @@
 /**
- * FilterBikes.js is a component to select a filter
- * which will be used to constrain the displayed Bikes list.
+ * FilterBikes.js is a presentational component to display a dropdown menu, displaying all bikes Categories, 
+ * which can be used to set a filter to constrain the presented list.
  * This component is implemeneted using the DropDown menu 
  * provided by Material-ui.
  */
@@ -12,30 +12,37 @@ import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 
 
-// list the necessary props
-const FilteredBikesProps = {
-  // the currently selected filter
+const propTypes = {
+  /**
+   * the currently selected filter 
+   * default: "all" - (provided by initial state)
+   */
   filter: PropTypes.string.isRequired,
-  // array of categories to be presented as items in a list
+  /**
+   * categories to be presented as items in a dropdown menu
+   */
   categories: PropTypes.arrayOf(PropTypes.string).isRequired,
   /**
    * Action to be dispatched when an item is clicked
-   * Function arguments:
-   *    category ("all" or one of the provided by categories )
+   * @param {string} category representing the filter to be applied
    */
   onSetFilter: PropTypes.func.isRequired,
 }
 
 
-// Define the presentational component and its logic
+// set defaultProps to avoid passing them in the test files
+const defaultProps = {
+    filter: "all",
+    categories: [],
+    onSetFilter: () => {},
+}
+
+
 class FilterBikes extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = {
-      anchorEl: null,
-      currCategory: "all",
-    };
+    this.state = { anchorEl: null };
   }
 
   handleClick = (event) => {
@@ -55,8 +62,8 @@ class FilterBikes extends React.Component {
   }
 
   render() {
-    const { categories } = this.props;
-    const { anchorEl, currCategory } = this.state; 
+    const { anchorEl } = this.state; 
+    const { filter, categories } = this.props;
 
     return (
       <div>
@@ -65,7 +72,7 @@ class FilterBikes extends React.Component {
           aria-haspopup="true"
           onClick={this.handleClick}
         >
-          Show {currCategory}
+          Show {filter}
         </Button>
         <Menu
           id="simple-menu"
@@ -92,8 +99,10 @@ class FilterBikes extends React.Component {
 }
 
 
-// apply the props
-FilterBikes.propTypes = FilteredBikesProps;
+// apply the propTypes and defaultProps
+FilterBikes.propTypes = propTypes;
+FilterBikes.defaultProps = defaultProps;
+
 
 
 // export the component

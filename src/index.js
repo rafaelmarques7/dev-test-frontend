@@ -5,9 +5,10 @@ import { Provider } from 'react-redux';
 import configureStore from './configStore';
 import registerServiceWorker from './manager/registerServiceWorker';
 import './styles/index.css'
+import { PersistGate } from 'redux-persist/integration/react';
 
 // Create the Redux store
-const store = configureStore();
+const { store, persistor } = configureStore();
 
 // Load root node, to be mounted
 const ROOT_NODE = document.getElementById('root');
@@ -15,7 +16,9 @@ const ROOT_NODE = document.getElementById('root');
 // Render to DOM
 ReactDOM.render(
   <Provider store={store}>
-    <App />
+    <PersistGate loading={null} persistor={persistor}>
+      <App />
+    </PersistGate>
   </Provider>, 
   ROOT_NODE
 );

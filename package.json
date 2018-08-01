@@ -14,12 +14,14 @@
     "react-test-renderer": "^16.4.1",
     "redux": "^4.0.0",
     "redux-logger": "^3.0.6",
+    "redux-persist": "^5.10.0",
     "redux-thunk": "^2.3.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
+    "test": "react-scripts test --env=jsdom  --verbose=true",
+    "coverage": "npm run test -- --coverage",
     "eject": "react-scripts eject"
   }
 }
