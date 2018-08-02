@@ -1,9 +1,12 @@
-﻿# A Front-End app for Bike Lovers
+﻿# A Front-End App for Bike Lovers
+This is an application for bike lovers. It displays a list/grid of bikes and their relevant information. 
+It follows an *instragram* like style. It was developed using React and Redux, and a demo is available 
+[here](https://infinite-spire-53819.herokuapp.com/ )
 
 ## Table of contents  
- - [The task](#the-task) - specifies what this project goal is
-    - [Details](#details) - details about the task
-    - [User story](#user-story) - the desired user features
+ - [The task](#the-task) 
+    - [Details](#details) 
+    - [User story](#user-story) 
     - [Assumptions](#task-assumptions)
     - [Assessment Criteria](#assessment-criteria)
  - [Development](#development)   
@@ -21,7 +24,7 @@
     - [API communication](#api-communication)
     - [Containers](#containers)
     - [Components](#components)
-    - [tests](#tests)
+    - [Tests](#tests)
     - [Development environment](#development-environment)
     - [Hosting](#hosting)
     
@@ -150,7 +153,7 @@ by having a way to save the state of the application, this problem is solved;
     │   ├── specs
     │   ├── actions.js    
     │   ├── selectors.js
-    └───├── reducers.js 
+    └── ├── reducers.js 
 ```
 
 
@@ -363,7 +366,16 @@ Currently, the ***tests which are missing*** refer to:
 be a problem;
 2) the container - however, given that the selectors and actions are tested, this should not be a problem;
 
-To run the 
+To run the test suite, use the following command:
+```sh
+npm run test
+```
+
+Alternatively, to run the tests and see the total test coverage, run:
+```sh
+npm run coverage
+```
+
 Current test coverage:
 ![test coverage](https://github.com/rafaelmarques7/dev-test-frontend/blob/master/src/media/test_coverage.png)
 
