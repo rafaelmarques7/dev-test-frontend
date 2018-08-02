@@ -6,7 +6,7 @@ It follows an *instragram* like style. It was developed using React and Redux, a
 ## Table of contents  
  - [The task](#the-task) 
     - [Details](#details) 
-    - [User story](#user-story) 
+    - [User story](#the-user-story) 
     - [Assumptions](#task-assumptions)
     - [Assessment Criteria](#assessment-criteria)
  - [Development](#development)   
@@ -298,7 +298,8 @@ Ideally, and if possible, React component should be pure, in the sense that they
 for a given input (props). Pure components do not have direct access to the application state, but they usually require 
 some state information to render the content. Thus, Containers are necessary, in order to access 
 the state of the application, mapping it to props, calling the desired children components and passing them the necessary props.
-#### Containers
+
+### Containers
 A Container is a React Component which has access to the state of the application, via functions such as *mapStateToProps*.
 If applicable, it also creates dispatching actions, which are mapped to props, using *mapDispatchToProps*.
 
@@ -390,7 +391,7 @@ npm run start
 ### Hosting
 A [demo](https://infinite-spire-53819.herokuapp.com/) of the application is currently available at
 the following link: https://infinite-spire-53819.herokuapp.com/ 
-The host if this application is the cloud PaaS [Heroku](https://www.heroku.com/).
+The host of this application is the cloud PaaS [Heroku](https://www.heroku.com/).
 
 
 
