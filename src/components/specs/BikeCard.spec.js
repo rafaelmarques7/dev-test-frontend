@@ -9,7 +9,7 @@ const bikeCardProps = {
   description: "some bike",
   categories: ["some_category"],
   imageSmall: "some_string",
-  imageLarg: "some_string"
+  imageLarge: "some_string"
 };
 
 it('renders without crashing', () => {

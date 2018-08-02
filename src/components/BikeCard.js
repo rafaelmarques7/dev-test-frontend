@@ -68,7 +68,7 @@ const styles = theme => ({
 });
 
 
-class BikeCard extends React.Component {
+class BikeCard extends React.PureComponent {
   render() {
     const { 
       name, 

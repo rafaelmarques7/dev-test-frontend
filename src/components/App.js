@@ -6,13 +6,13 @@
  * the necessary presentational components.
  */
 
-import React, { Component } from 'react';
+import React from 'react';
 import logo from '../media/logo.svg';
 import '../styles/App.css'
-import BikesContainer from './BikesContainer';
+import BikesContainer from '../containers/BikesContainer';
 
 
-class App extends Component {
+class App extends React.Component {
   render() {
     return (
       <div className="App">

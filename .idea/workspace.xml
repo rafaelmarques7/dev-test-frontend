@@ -4,42 +4,30 @@
     <list default="true" id="850fece8-3b8c-407d-b348-496561595944" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/array-includes/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/array-includes/.travis.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/babel-plugin-dynamic-import-node/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/babel-plugin-dynamic-import-node/.travis.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/es-abstract/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/es-abstract/.travis.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/es-to-primitive/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/es-to-primitive/.travis.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/es6-iterator/appveyor.yml" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/es6-iterator/appveyor.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/extend/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/extend/.travis.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/function-bind/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/function-bind/.travis.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/function.prototype.name/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/function.prototype.name/.travis.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/handlebars/appveyor.yml" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/handlebars/appveyor.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/has-symbols/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/has-symbols/.travis.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/immutable/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/immutable/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/immutable/contrib/cursor/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/immutable/contrib/cursor/__tests__/Cursor.ts.skip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/immutable/contrib/cursor/index.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/immutable/contrib/cursor/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/immutable/dist/immutable-nonambient.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/immutable/dist/immutable.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/immutable/dist/immutable.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/immutable/dist/immutable.js.flow" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/immutable/dist/immutable.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/immutable/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/is-callable/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/is-callable/.travis.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/is-regex/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/is-regex/.travis.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/object-inspect/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/object-inspect/.travis.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/object-keys/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/object-keys/.travis.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/object.entries/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/object.entries/.travis.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/object.values/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/object.values/.travis.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/resolve/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/resolve/.travis.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/resolve/appveyor.yml" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/resolve/appveyor.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/webpack-manifest-plugin/node_modules/jsonfile/appveyor.yml" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/webpack-manifest-plugin/node_modules/jsonfile/appveyor.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/tests/BikeCard.spec.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/specs/BikeCard.spec.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/tests/Bikes.spec.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/specs/Bikes.spec.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/tests/FilterBikes.spec.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/specs/FilterBikes.spec.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/tests/GridWrapper.spec.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/specs/GridWrapper.spec.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/clover.xml" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/clover.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/coverage-final.json" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/coverage-final.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/src/components/BikeCard.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/src/components/BikeCard.js.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/src/components/FilterBikes.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/src/components/FilterBikes.js.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/src/components/GridWrapper.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/src/components/GridWrapper.js.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/src/components/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/src/components/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/src/configStore.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/src/configStore.js.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/src/containers/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/src/containers/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/src/index.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/src/index.js.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/src/manager/actions.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/src/manager/actions.js.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/src/manager/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/src/manager/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/src/manager/reducers.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/src/manager/reducers.js.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/src/manager/registerServiceWorker.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/src/manager/registerServiceWorker.js.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/src/manager/selectors.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/src/manager/selectors.js.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/src/setupTests.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/src/setupTests.js.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/lcov.info" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/BikeCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BikeCard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/specs/BikeCard.spec.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/specs/BikeCard.spec.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/App.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/specs/App.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/manager/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/manager/actions.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -63,12 +51,22 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="748">
-                <caret line="146" column="3" lean-forward="true" selection-start-line="146" selection-start-column="3" selection-end-line="146" selection-end-column="3" />
+              <first_editor relative-caret-position="507">
+                <caret line="53" column="99" selection-start-line="53" selection-start-column="99" selection-end-line="53" selection-end-column="99" />
               </first_editor>
               <second_editor />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="App.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/App.js">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="App.spec.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/specs/App.spec.js">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -111,6 +109,19 @@
               <item name="BikesApp" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BikesApp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BikesApp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="specs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BikesApp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BikesApp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="media" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -170,6 +181,25 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
     </layout>
+    <layout-to-restore>
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.115911484" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Python Console" order="7" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32897604" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+    </layout-to-restore>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -208,11 +238,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/BikeCard.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1327">
+          <caret selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/App.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/specs/App.spec.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="748">
-            <caret line="146" column="3" lean-forward="true" selection-start-line="146" selection-start-column="3" selection-end-line="146" selection-end-column="3" />
+          <first_editor relative-caret-position="507">
+            <caret line="53" column="99" selection-start-line="53" selection-start-column="99" selection-end-line="53" selection-end-column="99" />
           </first_editor>
           <second_editor />
         </state>

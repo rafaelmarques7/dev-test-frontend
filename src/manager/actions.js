@@ -63,11 +63,11 @@ export function handleErrors(response) {
 }
 
 /**
- * Asyn action to load the Bikes data from the API
- * Dispatches 3 actions:
- *    - fetchBikesBegin   - informs user loading has begun 
+ * Async action to load the Bikes data from the API
+ * Dispatches 2 of 3 actions:
+ *    - fetchBikesBegin   - always - informs user loading has begun 
  *    - fetchBikesSuccess - merge state with received data
- *    - fetchBikesFailure - informs user something went wrong
+ *    - fetchBikesFailure - informs the user if something went wrong
  */
 export function fetchBikes() {
   return dispatch => {

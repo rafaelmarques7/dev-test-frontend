@@ -47,6 +47,12 @@ We're trying to see your thought processes with this task. What's more important
 
 Looking forward to seeing your project :-)
 
+### Screenshots
+These are two screenshots representing the UI for a large and small decide.
+
+![UI_large](https://github.com/rafaelmarques7/dev-test-frontend/tree/master/src/media/UI.png)
+![UI_small](https://github.com/rafaelmarques7/dev-test-frontend/tree/master/src/media/UI_small.png)
+
 # Development
 Hereafter the development of the project will be described in some detail.
 
@@ -109,12 +115,12 @@ by having a way to save the state of the application, this problem is solved;
     │   ├── syles   
     ├── components
     │   ├── specs
+    │   ├── App.js
     │   ├── BikeCard.js    
     │   ├── BikesList.js
     │   ├── FilterBikes.js
     │   └── GridWrapper.js  
     ├── containers
-    │   ├── App.js
     │   └── BikesContainer.js     
     ├── manager
     │   ├── specs
@@ -133,6 +139,7 @@ utilizes two middleware's - logger and thunk - and a persistent storage implemen
 of the code:
 
 ```javascript
+// configStore.js
 function configureStore(){
   const store = createStore(
     persistedReducer, 
@@ -146,6 +153,168 @@ function configureStore(){
 }
 ```
 
+### Managing State
+The state of the application is managed by redux, using three type of functions:
+1) reducers - the only way to alter the state is using a reducer;
+2) actions - reducers functions are called using an action;
+3) selectors - these functions do not alter they state, instead, they are used to access it;
+
+The state of the application can change only in a limited number of ways, given that there are only 4 reducer functions.
+The rootReducer is presented below:
+
+```javascript
+export function rootReducer(state=initialState, action) {
+  switch(action.type){
+    case FETCH_BIKES_BEGIN:
+      return setBikesBegin(state);
+    case FETCH_BIKES_SUCCESS:
+      return setBikesSuccess(state, action);
+    case FETCH_BIKES_FAILURE:
+      return setBikesFailure(state, action);
+    case SET_BIKES_FILTER:
+      return setBikesFilter(state, action);
+    default:  
+      return state;
+  }
+}
+``` 
+
+### Calling the bikes API
+In order to obtain the necessary bikes data, the bikes API has to be called. This is done using asynchronous actions.
+***This action is called once***, at the componentDidMount() method of the BikesContainer. 
+It dispatches fetchBikesBegin, to inform the user (via state update and subsequent rendering) that an action was dispatched
+and the data is being loaded. After this, either fetchBikesSuccess or fetchBikesFailure is invoked. In any case,
+the loading is reset, and the data/error is merged to the state. Below is the code for the async action.
+
+```javascript
+/**
+ * Async action to load the Bikes data from the API
+ * Dispatches 2 of 3 actions:
+ *    - fetchBikesBegin   - always - informs user loading has begun 
+ *    - fetchBikesSuccess - merge state with received data
+ *    - fetchBikesFailure - informs the user if something went wrong
+ */
+export function fetchBikes() {
+  return dispatch => {
+    dispatch(fetchBikesBegin());
+    return fetch(bikesUrl)
+      .then(handleErrors)
+      .then(res => res.json())
+      .then(json => {
+        dispatch(fetchBikesSuccess(json))
+        return json;
+      })
+      .catch(error => dispatch(fetchBikesFailure(error)));
+  };
+}
+```
+
+
+### Accessing the state
+The state of the application is accessed only by a single component - the *BikesContainer*. This component 
+has access to the state, and to the actions, passing these as props to the children component, particularly, 
+to *BikesList* and *FilterBikes*.
+The state is accessed (mostly) using selectors. This is particularly useful for accessing only a subset of the state.
+For example, when a user sets a filter, to constrain the displayed bikes, we want to retrieve only a subset of the 
+bikes list. To do this, the getFilteredBikes() function was implemented. See code below.
+
+```javascript
+/**
+ * Returns an array of the items which match the filter;
+ * if the filter is set to "all" return the entire bikes array;
+ * otherwise filter by the selected category;
+ */
+export const getFilteredBikes = (state, category) => {
+  if (category === "all") {
+    return state.bikes.items;
+  }
+  var filtered_bikes = [];
+  state.bikes.items.forEach((bike) => {
+    bike.class.forEach(cat => {
+      if (cat === category && filtered_bikes.indexOf(bike) === -1) {
+        filtered_bikes.push(bike)
+      }
+    })
+  });
+  return filtered_bikes;
+}
+```
+
+### Containers and Components
+Ideally, and if possible, React component should be pure, in the sense that they always render the same content 
+for a given input (props). Pure components do not have direct access to the application state, but they usually require 
+some state information to render the content. Thus, Containers are necessary, in order to access 
+the state of the application, mapping it to props, calling the desired children components and passing them the necessary props.
+#### Containers
+A Container is a React Component which has access to the state of the application, via functions such as *mapStateToProps*.
+If applicable, it also creates dispatching actions, which are mapped to props, using *mapDispatchToProps*.
+
+In this project, there is a single container, called BikesContainer, which has access to the state and actions.
+Below is the main code of this container. 
+There are some things worth nothing:
+1) This containers invokes two children components: FilterBikes, and BikesList;
+2) this container has access to the state, using mapStateToProps, and stores the relevant information as props, 
+which will be passed to the children;
+3) this container maps some actions to props;
+4) this containers dispatches an (async) action upon mounting. Since this container is only mounted once, 
+this action, which refers to an API call to the bikes repository, will also be called only once;
+
+```javascript 
+class BikesContainer extends React.Component {
+  componentDidMount() {
+    this.props.fetchBikes();
+  }
+  
+  render() {
+    return(
+      <div>
+        <FilterBikes {...this.props} />
+        <BikesList {...this.props} />
+      </div>
+    )
+  }
+}
+
+
+const mapStateToProps = state => ({
+  categories: getAllCategories(state),
+  filter: getCurrentFilter(state),
+  products: getFilteredBikes(state, getCurrentFilter(state)),
+  loading: state.loading,
+  error: state.error,
+});
+
+
+const mapDispatchToProps = dispatch => {
+  return bindActionCreators({
+    fetchBikes, 
+    setBikesFilter   
+  }, dispatch);
+};
+
+```
+
+### Components
+There are a total of 5 presentational components for this application:
+1) App.js - the main component, called by src/index.js - mounts the react components to a specific HTML node;
+2) BikeCard.js - a presentational component for rendering the bikes information and images;
+3) BikesList.js - a component to render multiple BikeCards;
+4) FilterBikes.js - a dropDownMenu to display the available categories, which may be used to set a filter;
+5) GridWrapper.js - a wrapper to create a responsive layout.
+
+### Tests
+It is imperative to have tests for the developed code. Between the many usefulness this brings,
+it allows to easily verify if a new code change broke the application, or if everything is fine.
+This application has only unit-test, which cover all actions, reducers and selectors. It also 
+has unit-tests for each component, although these are mostly shallow tests. In any case, they assure that the component 
+renders without crashing.
+Currently, the ***tests which are missing*** refer to:
+1) the asynchronous actions - however, given that every action that may be invoked is testing and passing, this should not 
+be a problem;
+2) the container - however, given that the selectors and actions are tested, this should not be a problem;
+
+Current test coverage:
+![test coverage](https://github.com/rafaelmarques7/dev-test-frontend/tree/master/src/media/test_coverage.png)
 
 
 
