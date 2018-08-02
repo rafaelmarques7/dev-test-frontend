@@ -10,6 +10,7 @@ It follows an *instragram* like style. It was developed using React and Redux, a
     - [Assumptions](#task-assumptions)
     - [Assessment Criteria](#assessment-criteria)
  - [Development](#development)   
+    - [Screenshots](#screenshots)
     - [Assumptions](#assumptions)
     - [Boilerplate](#boilerplate)
     - [Frameworks](#frameworks)
