@@ -1,7 +1,11 @@
-﻿# Bikes Front-End application
+﻿# A Front-End app for Bike Lovers
+
+## Table of contents
 
 Here's a front end development assessment that we'd like for you to complete in approximately one week.  
-
+ - [The task](#the-task) - specifies what this project goal is
+    - [details](#details) - details about the task
+    
 ## The task
 We estimate that this task will take about **6 hours** of contiguous development.  Feel free to develop in a non-contiguous manner.  
 If you start to go way over time then just submit what you have and create a list in your project's **README.md** of anything else that would have liked to add/do given the time.
