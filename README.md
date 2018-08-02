@@ -1,10 +1,29 @@
 ﻿# A Front-End app for Bike Lovers
 
-## Table of contents
-
-Here's a front end development assessment that we'd like for you to complete in approximately one week.  
+## Table of contents  
  - [The task](#the-task) - specifies what this project goal is
-    - [details](#details) - details about the task
+    - [Details](#details) - details about the task
+    - [User story](#user-story) - the desired user features
+    - [Assumptions](#task-assumptions)
+    - [Assessment Criteria](#assessment-criteria)
+ - [Development](#development)   
+    - [Assumptions](#assumptions)
+    - [Boilerplate](#boilerplate)
+    - [Frameworks](#frameworks)
+    - [Libraries](#other-libraries)
+    - [Solution](#solution)
+    - [Folder Structure](#folder-structure)
+ - [Implementation Details](#implementation-details)
+    - [Application State](#application-state)
+    - [State management](#state-management)
+    - [Accessing State](#accessing-state)
+    - [Store settings](#store-settings)
+    - [API communication](#api-communication)
+    - [Containers](#containers)
+    - [Components](#components)
+    - [tests](#tests)
+    - [Development environment](#development-environment)
+    - [Hosting](#hosting)
     
 ## The task
 We estimate that this task will take about **6 hours** of contiguous development.  Feel free to develop in a non-contiguous manner.  
@@ -29,7 +48,7 @@ Assuming I have access to a modern web browser (chrome) with an internet connect
 
 A JSON object with all the relevant bike data is available at, feel free to call that URL directly from your page or host it on your server if you're using one: [https://jujhar.com/bikes.json](https://jujhar.com/bikes.json)
 
-### Assumptions:
+### Task-Assumptions:
 - Your project must work in the latest version of Google Chrome, you can ignore all other browsers
 - Please list any other assumptions you may have made
 - Feel free to use/not use any JS libraries/frameworks
@@ -51,14 +70,15 @@ We're trying to see your thought processes with this task. What's more important
 
 Looking forward to seeing your project :-)
 
+
+# Development
+Hereafter the development of the project will be described in some detail.
+
 ### Screenshots
 These are two screenshots representing the UI for a large and small decide.
 
 ![UI_large](https://github.com/rafaelmarques7/dev-test-frontend/blob/master/src/media/UI.png)
 ![UI_small](https://github.com/rafaelmarques7/dev-test-frontend/blob/master/src/media/UI_small.png)
-
-# Development
-Hereafter the development of the project will be described in some detail.
 
 ### Assumptions
  1) This project may be initialised with a boilerplate configuration, such as [create-react-app](https://github.com/facebook/create-react-app);   
@@ -93,7 +113,7 @@ npm start
  5) [redux-persist](https://github.com/rt2zz/redux-persist) - a library to create persistent stores - useful to maintain 
  the state of the application;
  
-### Solving the user story
+### Solution
 The development of this project will try to answer directly to each request of the user story:
 - A) Use [material-ui grid system](https://material-ui.com/demos/grid-list/) to create a responsive
  UI, with a grid display for large devices, and a list for smaller ones;
@@ -136,28 +156,29 @@ by having a way to save the state of the application, this problem is solved;
 
 ## Implementation Details
 
-### Setting the store
+### Application State
 
-The redux store is set up in a traditional way. However, it contains some extra's, particularly it 
-utilizes two middleware's - logger and thunk - and a persistent storage implementation. Below is the most relevant parts 
-of the code:
-
-```javascript
-// configStore.js
-function configureStore(){
-  const store = createStore(
-    persistedReducer, 
-    applyMiddleware(
-      thunkMiddleware,
-      loggerMiddleware
-    )
-  );
-  const persistor = persistStore(store)
-  return { store, persistor };
-}
+The state of  the application is given by a JavaScript object, which has the structure presented below. It contains 4 attributes:
+1) bikes - object containing an array of information relative to the bikes;
+2) loading - bool to inform if a request is pending or not;
+3) error - object (including null) informing in an error occured;
+4) filter - string used to filter the content;
+```json
+state = {
+  // place holder for the bikes data
+  bikes: {
+    items: []
+  },
+  // used to inform if the request is pending
+  loading: false,
+  // used to inform if there are errors 
+  error: null,
+  // used to decide which bikes to show
+  filter: "all",   
+};
 ```
 
-### Managing State
+### State management
 The state of the application is managed by redux, using three type of functions:
 1) reducers - the only way to alter the state is using a reducer;
 2) actions - reducers functions are called using an action;
@@ -183,7 +204,61 @@ export function rootReducer(state=initialState, action) {
 }
 ``` 
 
-### Calling the bikes API
+### Accessing state
+The state of the application is accessed only by a single component - the *BikesContainer*. This component 
+has access to the state, and to the actions, passing these as props to the children component, particularly, 
+to *BikesList* and *FilterBikes*.
+The state is accessed (mostly) using selectors. This is particularly useful for accessing only a subset of the state.
+For example, when a user sets a filter, to constrain the displayed bikes, we want to retrieve only a subset of the 
+bikes list. To do this, the getFilteredBikes() function was implemented. See code below.
+
+```javascript
+/**
+ * Returns an array of the items which match the filter;
+ * if the filter is set to "all" return the entire bikes array;
+ * otherwise filter by the selected category;
+ */
+export const getFilteredBikes = (state, category) => {
+  if (category === "all") {
+    return state.bikes.items;
+  }
+  var filtered_bikes = [];
+  state.bikes.items.forEach((bike) => {
+    bike.class.forEach(cat => {
+      if (cat === category && filtered_bikes.indexOf(bike) === -1) {
+        filtered_bikes.push(bike)
+      }
+    })
+  });
+  return filtered_bikes;
+}
+```
+
+
+### Store settings
+
+The redux store is set up in a traditional way. However, it contains some extra's, particularly it 
+utilizes two middleware's - logger and thunk - and a persistent storage implementation. Below is the most relevant parts 
+of the code:
+
+```javascript
+// configStore.js
+function configureStore(){
+  const store = createStore(
+    persistedReducer, 
+    applyMiddleware(
+      thunkMiddleware,
+      loggerMiddleware
+    )
+  );
+  const persistor = persistStore(store)
+  return { store, persistor };
+}
+```
+
+
+
+### API communication
 In order to obtain the necessary bikes data, the bikes API has to be called. This is done using asynchronous actions.
 ***This action is called once***, at the componentDidMount() method of the BikesContainer. 
 It dispatches fetchBikesBegin, to inform the user (via state update and subsequent rendering) that an action was dispatched
@@ -214,35 +289,6 @@ export function fetchBikes() {
 ```
 
 
-### Accessing the state
-The state of the application is accessed only by a single component - the *BikesContainer*. This component 
-has access to the state, and to the actions, passing these as props to the children component, particularly, 
-to *BikesList* and *FilterBikes*.
-The state is accessed (mostly) using selectors. This is particularly useful for accessing only a subset of the state.
-For example, when a user sets a filter, to constrain the displayed bikes, we want to retrieve only a subset of the 
-bikes list. To do this, the getFilteredBikes() function was implemented. See code below.
-
-```javascript
-/**
- * Returns an array of the items which match the filter;
- * if the filter is set to "all" return the entire bikes array;
- * otherwise filter by the selected category;
- */
-export const getFilteredBikes = (state, category) => {
-  if (category === "all") {
-    return state.bikes.items;
-  }
-  var filtered_bikes = [];
-  state.bikes.items.forEach((bike) => {
-    bike.class.forEach(cat => {
-      if (cat === category && filtered_bikes.indexOf(bike) === -1) {
-        filtered_bikes.push(bike)
-      }
-    })
-  });
-  return filtered_bikes;
-}
-```
 
 ### Containers and Components
 Ideally, and if possible, React component should be pure, in the sense that they always render the same content 
@@ -317,10 +363,22 @@ Currently, the ***tests which are missing*** refer to:
 be a problem;
 2) the container - however, given that the selectors and actions are tested, this should not be a problem;
 
+To run the 
 Current test coverage:
 ![test coverage](https://github.com/rafaelmarques7/dev-test-frontend/blob/master/src/media/test_coverage.png)
 
 
+### Development environment
+This app can run on your local machine, by running the following command:
+
+```sh
+npm run start
+```
+
+### Hosting
+A [demo](https://infinite-spire-53819.herokuapp.com/) of the application is currently available at
+the following link: https://infinite-spire-53819.herokuapp.com/ 
+The host if this application is the cloud PaaS [Heroku](https://www.heroku.com/).
 
 
 
