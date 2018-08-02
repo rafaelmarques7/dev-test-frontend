@@ -50,8 +50,8 @@ Looking forward to seeing your project :-)
 ### Screenshots
 These are two screenshots representing the UI for a large and small decide.
 
-![UI_large](https://github.com/rafaelmarques7/dev-test-frontend/tree/master/src/media/UI.png)
-![UI_small](https://github.com/rafaelmarques7/dev-test-frontend/tree/master/src/media/UI_small.png)
+![UI_large](https://github.com/rafaelmarques7/dev-test-frontend/blob/master/src/media/UI.png)
+![UI_small](https://github.com/rafaelmarques7/dev-test-frontend/blob/master/src/media/UI_small.png)
 
 # Development
 Hereafter the development of the project will be described in some detail.
@@ -314,7 +314,7 @@ be a problem;
 2) the container - however, given that the selectors and actions are tested, this should not be a problem;
 
 Current test coverage:
-![test coverage](https://github.com/rafaelmarques7/dev-test-frontend/tree/master/src/media/test_coverage.png)
+![test coverage](https://github.com/rafaelmarques7/dev-test-frontend/blob/master/src/media/test_coverage.png)
 
 
 

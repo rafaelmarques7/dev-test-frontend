@@ -1,34 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="850fece8-3b8c-407d-b348-496561595944" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coverage/clover.xml" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/clover.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coverage/coverage-final.json" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/coverage-final.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/src/components/BikeCard.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/src/components/BikeCard.js.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/src/components/FilterBikes.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/src/components/FilterBikes.js.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/src/components/GridWrapper.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/src/components/GridWrapper.js.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/src/components/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/src/components/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/src/configStore.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/src/configStore.js.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/src/containers/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/src/containers/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/src/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/src/index.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/src/index.js.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/src/manager/actions.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/src/manager/actions.js.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/src/manager/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/src/manager/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/src/manager/reducers.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/src/manager/reducers.js.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/src/manager/registerServiceWorker.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/src/manager/registerServiceWorker.js.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/src/manager/selectors.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/src/manager/selectors.js.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/src/setupTests.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/src/setupTests.js.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coverage/lcov.info" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/BikeCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BikeCard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/specs/BikeCard.spec.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/specs/BikeCard.spec.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/App.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/specs/App.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/manager/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/manager/actions.js" afterDir="false" />
-    </list>
+    <list default="true" id="850fece8-3b8c-407d-b348-496561595944" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -51,8 +24,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="507">
-                <caret line="53" column="99" selection-start-line="53" selection-start-column="99" selection-end-line="53" selection-end-column="99" />
+              <first_editor relative-caret-position="490">
+                <caret line="52" column="81" selection-start-line="52" selection-start-column="81" selection-end-line="52" selection-end-column="81" />
               </first_editor>
               <second_editor />
             </state>
@@ -254,8 +227,8 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="507">
-            <caret line="53" column="99" selection-start-line="53" selection-start-column="99" selection-end-line="53" selection-end-column="99" />
+          <first_editor relative-caret-position="490">
+            <caret line="52" column="81" selection-start-line="52" selection-start-column="81" selection-end-line="52" selection-end-column="81" />
           </first_editor>
           <second_editor />
         </state>
