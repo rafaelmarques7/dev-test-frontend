@@ -1,12 +1,12 @@
 ﻿# A Front-End App for Bike Lovers
 This is an application for bike lovers. It displays a list/grid of bikes and their relevant information. 
-It follows an *instragram* like style. It was developed using React and Redux, and a demo is available 
+It follows an *instragram* like style. It was developed using React and Redux, and a demo is available.
 [here](https://infinite-spire-53819.herokuapp.com/ )
 
 ## Table of contents  
  - [The task](#the-task) 
     - [Details](#details) 
-    - [User story](#the-user-story) 
+    - [The iser story](#the-user-story) 
     - [Assumptions](#task-assumptions)
     - [Assessment Criteria](#assessment-criteria)
  - [Development](#development)   
@@ -41,7 +41,7 @@ To complete this task, you must:
 - design the front end as you see fit
 - when finished send over the GitHub repo and any other links
 
-#### The User story
+#### The iser story
 As a user,
 Assuming I have access to a modern web browser (chrome) with an internet connection and I am visiting the page
 - A) I would like to see a list/grid of bikes (taken from the bike data URL below)
