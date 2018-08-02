@@ -9,8 +9,11 @@ It follows an *instragram* like style. It was developed using React and Redux, a
     - [The user story](#the-user-story) 
     - [Assumptions](#task-assumptions)
     - [Assessment Criteria](#assessment-criteria)
- - [Development](#development)   
+ - [Installation](#installation)
+ - [Final Product](#final-product)
     - [Screenshots](#screenshots)
+    - [Hosting](#hosting)
+ - [Development](#development)   
     - [Assumptions](#assumptions)
     - [Boilerplate](#boilerplate)
     - [Frameworks](#frameworks)
@@ -26,8 +29,7 @@ It follows an *instragram* like style. It was developed using React and Redux, a
     - [Containers](#containers)
     - [Components](#components)
     - [Tests](#tests)
-    - [Development environment](#development-environment)
-    - [Hosting](#hosting)
+    
     
 ## The task
 We estimate that this task will take about **6 hours** of contiguous development.  Feel free to develop in a non-contiguous manner.  
@@ -74,15 +76,54 @@ We're trying to see your thought processes with this task. What's more important
 
 Looking forward to seeing your project :-)
 
+## Installation
+This application probably runs in any operating system, but was only tested for Windows 10.
+The **only prerequisite** for running this application on a local machine is Node (6+)
+and npm (5.2+).
 
-# Development
-Hereafter the development of the project will be described in some detail.
+To actually install this app on your local machine, execute the following steps:
+1) create and navigate to a directory of your choice, for example:
+    ``` 
+    mkdir bikesApp && cd bikesApp   
+    ```
+2) start the git environment:
+    ```sh
+    git init .
+    ```
+3) clone this repository:
+    ```sh 
+    git clone https://github.com/rafaelmarques7/dev-test-frontend.git
+    ```
+4) navigate to the newly created folder: 
+    ```sh 
+    cd dev-test-frontend
+    ```
+ 5) install the dependencies:
+    ```sh
+    npm install
+    ```
+ 6) you can now launch the app by executing:
+    ```sh
+    npm run start
+    ```
+    
+# Final product
 
 ### Screenshots
 These are two screenshots representing the UI for a large and small decide.
 
 ![UI_large](https://github.com/rafaelmarques7/dev-test-frontend/blob/master/src/media/UI.png)
 ![UI_small](https://github.com/rafaelmarques7/dev-test-frontend/blob/master/src/media/UI_small.png)
+
+### Hosting
+A [demo](https://infinite-spire-53819.herokuapp.com/) of the application is currently available at
+the following link: https://infinite-spire-53819.herokuapp.com/ 
+The host of this application is the cloud PaaS [Heroku](https://www.heroku.com/).
+
+# Development
+Hereafter the development of the project will be described in some detail.
+
+
 
 ### Assumptions
  1) This project may be initialised with a boilerplate configuration, such as [create-react-app](https://github.com/facebook/create-react-app);   
@@ -380,21 +421,6 @@ npm run coverage
 
 Current test coverage:
 ![test coverage](https://github.com/rafaelmarques7/dev-test-frontend/blob/master/src/media/test_coverage.png)
-
-
-### Development environment
-This app can run on your local machine, by running the following command:
-
-```sh
-npm run start
-```
-
-### Hosting
-A [demo](https://infinite-spire-53819.herokuapp.com/) of the application is currently available at
-the following link: https://infinite-spire-53819.herokuapp.com/ 
-The host of this application is the cloud PaaS [Heroku](https://www.heroku.com/).
-
-
 
 
 
