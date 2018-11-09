@@ -1,4 +1,4 @@
-﻿# A Front-End App for Bike Lovers
+﻿# A Front-End App for Bike Lovers!
 This is an application for bike lovers. It displays a list/grid of bikes and their relevant information. 
 It follows an *instragram* like style. It was developed using React and Redux, and a demo is available.
 [here](https://infinite-spire-53819.herokuapp.com/).
